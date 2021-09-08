@@ -1,0 +1,14 @@
+.nav-link{
+    color: white !important;
+    padding-top: 30px !important;
+    font-size: 50px;
+    padding-bottom: 30px !important;
+} 
+
+.nav-link:active{
+    color: #CED4D9 !important;
+}
+
+a.navbar-brand{
+    padding-left: 20px !important;
+}
