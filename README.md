@@ -1,9 +1,6 @@
 # team2
 MSIS
 
-
-cncappel
 aatalib
+cncappel
 masaxena
-
-
