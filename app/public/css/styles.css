@@ -1,0 +1,37 @@
+#navbarColor{
+    background-color: #E9EAF5 !important;
+    padding-left: 30px;
+}
+
+div#navbarNavAltMarkup {
+    justify-content: end !important;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+
+.navbarCompany{
+    background-color: #E9EAF5;
+    padding-left: 30px;
+    font-family: var(--bs-body-font-family);
+    padding-top: 0px;
+}
+
+#loginButton{
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    background-color: #B6CAFB;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: none;
+}
+
+#formattedISRA {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 40px;
+}
+
+#footerColor{
+    background-color: #E9EAF5 !important;
+}
+
