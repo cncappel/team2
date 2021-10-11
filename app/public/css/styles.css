@@ -35,3 +35,12 @@ div#navbarNavAltMarkup {
     background-color: #E9EAF5 !important;
 }
 
+img.d-block.w-100 {
+    height: 500px !important;
+}
+
+.titleCard {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
