@@ -44,3 +44,12 @@ img.d-block.w-100 {
     margin-left: 30px;
     margin-bottom: 30px;
 }
+
+.repoStyleButton{
+    color: rgba(0,0,0,.55);
+    text-decoration: none;
+}
+
+h5.card-header {
+    background-color: #E9EAF5;
+}
