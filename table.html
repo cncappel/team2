@@ -70,7 +70,48 @@
                   </tr>
                 </tbody>
               </table>
-    
+              
+
+
+              <!-- Form -->
+                <h2>Submission Form</h2>
+              <form>
+                <div class="mb-3">
+                  <label for="GID" class="form-label">Game ID</label>
+                  <input type="text" class="form-control" id="GID" aria-describedby="emailHelp">
+                  </div>
+                <div class="mb-3">
+                  <label for="game" class="form-label">Game</label>
+                  <input type="text" class="form-control" id="game">
+                </div>
+
+                <div class="mb-3">
+                  <label for="date" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+
+                <div class="mb-3">
+                  <label for="refreename" class="form-label">Refree Name</label>
+                  <input type="text" class="form-control" id="refreename">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Status" class="form-label">Select Status:</label>
+                  <select id="Status" name="Status">
+                    <option value="Assigned">Assigned</option>
+                    <option value="Unassigned">Unassigned</option>
+                    <option value="Tentative">Tentative</option>
+                    <option value="Accepted">Accepted</option>
+                  </select>
+                </div>
+
+             
+                
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+
         </main>
 
 
