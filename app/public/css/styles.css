@@ -53,3 +53,7 @@ img.d-block.w-100 {
 h5.card-header {
     background-color: #E9EAF5;
 }
+.center {
+    text-align: center;
+    align-items: center;
+  }
