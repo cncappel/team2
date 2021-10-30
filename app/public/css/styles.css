@@ -56,4 +56,34 @@ h5.card-header {
 .center {
     text-align: center;
     align-items: center;
-  }
+}
+
+#login{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+#exampleInputEmail1{
+    width: 500px;
+}
+
+#exampleInputPassword1{
+    width: 500px;
+}
+
+#aboutUs{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+#aboutDescription {
+    margin-top: 20px;
+}
+
+.loginButton{
+    color: white;
+    text-decoration: none;
+}
