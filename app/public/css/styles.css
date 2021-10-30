@@ -102,9 +102,21 @@ h5.card-header {
 
 
 #largeTable{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .refDataTable{
-    font-size: 30px;
+    font-size: 20px;
+}
+
+#refDataHeader{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#refData{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
