@@ -99,3 +99,12 @@ h5.card-header {
     background-color: #E9EAF5;
     padding-bottom: 50px;
 }
+
+
+#largeTable{
+    font-size: 50px;
+}
+
+.refDataTable{
+    font-size: 30px;
+}
