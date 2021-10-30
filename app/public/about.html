@@ -6,8 +6,9 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </head>
+
   <nav id="navbarColor" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a id="formattedISRA" class="navbar-brand" href="index.html">ISRA</a>
+    <a id="formattedISRA" class="navbar-brand" href="#">ISRA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,39 +16,37 @@
       <div class="navbar-nav">
         <a class="nav-link active" href="index.html">Home<span class="sr-only"></span></a>
         <a class="nav-link" href="about.html">About Us</a>
+        <a id="loginButton" class="nav-link" href="login.html">Admin Login</a>
+        <a id="loginButton" class="nav-link" href="login.html">Referee Login</a>
       </div>
     </div>
     <br>
   </nav>
 
   <h6 class="navbarCompany">Indiana Soccer Referee Association</h6>
+
   <body>
-    <div id="login" class="container">
-      <h3>Please sign in to view your information:</h3>
-        <div class="row">
-            <div class="col-12">
-                <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><a href="mainPage.html" class="loginButton">Submit</a></button>
-                </form>
-            </div>
+    <div id="aboutUs" class="container-md">
+        <h1><u>About Us</u></h1>
+        <img src="img/blue-shirt.jpg">
+        <div id="aboutDescription" class="container-md">
+            <h4>Who we are:</h4>
+                <p>Indiana Soccer Referees Association is responsible for assigning referees to U.S.S.F.-sanctioned club matches in the greater-Indianapolis area. Our goal is to create one central place where you can find all your information for anything you need. We aim to create and grow a qualified group of referees to help our Indiana soccer games run smoothly. Referees are held to the highest standards as they are responsible for maintaining a safe and enjoyable playing environment for Indiana Soccer Association members of all ages and skill levels.</p>
+            <h4>Our vision:</h4>
+                <p>To help referees have on central place to find their games and their performance information.</p>
+            <h4>Our mission:</h4>
+                <p>To empower soccer officials with the necessary tools to officiate the game of soccer in a timely and professional manner.</p>
         </div>
     </div>
+
+    <!-- Import Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  
+</body> 
     <footer id="footerColor" class="footer mt-auto py-3 bg-light">
       <div class="container">
-        <div class="row">
+        <div class='row'>
           <div class="col-12">
             <center>
               <span class="text-muted text-center">
@@ -65,5 +64,4 @@
       </div>
     </footer>
   </body>
-
 </html>
