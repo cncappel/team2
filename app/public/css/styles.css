@@ -95,6 +95,7 @@ h5.card-header {
     height: 700px !important;
 }
 
-#userIcon{
-    
+.userProfile{
+    background-color: #E9EAF5;
+    padding-bottom: 50px;
 }
