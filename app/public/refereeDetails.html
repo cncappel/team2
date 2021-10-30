@@ -5,7 +5,8 @@
       <link rel="stylesheet" href="css/styles.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  </head>
+      <script src="https://unpkg.com/vue@next"></script>
+    </head>
 
   <nav id="navbarColor" class="navbar navbar-expand-lg navbar-light bg-light">
     <a id="formattedISRA" class="navbar-brand" href="#">ISRA</a>
@@ -31,7 +32,35 @@
     <div id="aboutUs" class="container-md">
         <h1><u>Ref details list (Here)</u></h1>
     </div>
+  <center>
+    <div id="refereesApp">
+      <div id="booksTable">
+        <table id="bookTableSorted" class="sortable-theme-dark">
+          <thead>
+            <tr>
+              <th scope="col" id="largeTable">Name</th>
+              <th scope="col" id="largeTable">Age</th>
+              <th scope="col" id="largeTable">RefGrade</th>
+              <th scope="col" id="largeTable">RefRating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="referee in referees">
+              <td class="refDataTable">{{ referee.name }}</td>
+              <td class="refDataTable">{{ referee.age }}</td>
+              <td class="refDataTable">{{ referee.refGrade }}</td>
+              <td class="refDataTable">{{ referee.refRating }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>  
+  </center>
 
+  </body>
+  <script src="js/referees.js"></script>
+  <script src="js/tablesort.min.js"></script>
+  <script> new Tablesort(document.getElementById('bookTableSorted'));</script>
     <!-- Import Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
