@@ -2,6 +2,7 @@ const refereesApp = {
     data() {
       return {
         referees: [],
+        assign: []
       }
     },
     computed: {
@@ -23,6 +24,19 @@ const refereesApp = {
                 console.log('users data not pulling');
             })
         },
+        fetchAssignData() {
+            fetch("/api/assignments/")
+            .then( response => response.json())
+            .then( (responseJson) => {
+                console.log(responseJson);
+                this.assign = responseJson;
+                console.log('pulled users data');
+            })
+            .catch( (err) => {
+                console.error(err)
+                console.log('users data not pulling');
+            })
+        }
     },
     created() {
         this.fetchRefereeData();
