@@ -39,33 +39,53 @@
 
   <body>
 
-    <div id="aboutUs" class="container-md">
-      <h1><u>Dynamic assignments table here</u></h1>
-    </div>
-
     <div class="container" id="refereesApp">
+      <h1>Dynamic assignments table here</h1>
+
       <div class="row align-items-start">
-        <!-- The Javascript Section-->
         <div class="col col-8">
+
+          <!-- Table Start-->
           <table class="table" id="taskTable">
             <thead>
               <tr>
-                <th>Ref ID </th>
-                <th>Name </th>
-                <th>Ref Grade </th>
-                <th>Ref Rating </th>
+                <th>Status ID </th>
+                <th>Ref Status </th>
+                <th>Accepted </th>
               </tr>
             </thead>
             <tbody>
-                <tr v-for="ref in referees">
-                  <td>{{ ref.refID }}</td>
-                  <td>{{ ref.name }}</td>
-                  <td>{{ ref.refGrade }}</td>
-                  <td>{{ ref.refRating }}</td>
+                <tr v-for="a in assign">
+                  <td>{{ a.statusID }}</td>
+                  <td>{{ a.refStatus }}</td>
+                  <td>{{ a.accepted }}</td>
+                  <td>
+                    <button type="button" v-on:click="handleEditAssign(a)" class="btn btn-outline-secondary btn-sm">Edit</button>
+                    <button type="button" v-on:click="postDeleteAssign(a)" class="btn btn-outline-secondary btn-sm">Delete</button>
+                  </td>
                 </tr>
             </tbody>
           </table>
+          <!-- Table END-->
         </div>
+
+        <!-- Forms Section -->
+        <div class="col col-4">
+          <h3>{{ selectedAssign === null ? "Add " : "Edit " }} Assignment</h3>
+          <form v-on:submit.prevent="postAssign">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" v-model="assignForm.refStatus"class="form-control" id="refStatus">
+            </div>
+            <div class="mb-3">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" v-model="assignForm.accepted" class="form-control" id="accepted">
+            </div>
+            <button type="submit" class="btn btn-primary">{{ selectedAssign === null ? "Submit" : "Edit " }} Assignment</button>
+          </form>
+        </div>
+
+
       </div>
     </div>
 
@@ -73,27 +93,21 @@
 
 
 
-    <!-- FOOTER START -->
-    <footer id="footerColor" class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <div class='row'>
-          <div class="col-12">
-            <center>
-              <span class="text-muted text-center">
-                <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
-                <a href="mailto:cncappel@iu.edu | ">aatalib@iu.edu</a>
-                <a href="mailto:cncappel@iu.edu | ">(insert email)</a>
-                <br>
-                <button id="loginButton"><a class="repoStyleButton"href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
-                <br>
-                <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span>
-              </span>
-            </center>
-          </div>
-        </div>
-      </div>
+    <!-- Footer START-->
+    <footer id="footer" class="footer mt-auto py-3 bg-light">
+      <center>
+        <span class="text-muted text-center">
+          <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
+          <a href="mailto:cncappel@iu.edu | ">aatalib@iu.edu</a>
+          <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
+          <br>
+          <button id="loginButton"><a class="repoStyleButton"href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
+          <br>
+          <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span>
+        </span>
+      </center>
     </footer>
-    <!-- FOOTER END -->
+    <!-- Footer END-->
 
     <!-- Script Table-->
     <script src="js/referees.js"></script>
