@@ -5,6 +5,7 @@
       <link rel="stylesheet" href="css/styles.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/vue@next"></script>
   </head>
 
   <nav id="navbarColor" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,10 +29,40 @@
   <h6 class="navbarCompany">Indiana Soccer Referee Association</h6>
 
   <body>
-    <div id="aboutUs" class="container-md">
-        <h1><u>See Game Assignments Below</u></h1>
+    <div class="container" id="gameApp">
+      <div class="row align-items-start">
+        <div class="col col-12">
+          <h1 id="pageHeaders">Master Game List:</h1>
+
+          <!-- Table START-->
+          <table class="table" id="taskTable">
+            <thead>
+              <tr>
+                <th>Game ID</th>
+                <th>Field</th>
+                <th>Time</th>
+                <th>Game Level</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr v-for="game in games">
+                  <td>{{ game.gameID }}</td>
+                  <td>{{ game.field }}</td>
+                  <td>{{ game.time }}</td>
+                  <td>{{ game.gameLevel }}</td>
+                </tr>
+            </tbody>
+          </table>
+          <!-- Table END-->
+        </div>
+      </div>
     </div>
 
+    <script src="js/games.js"></script>
+    <script src="js/tablesort.js"></script>
+    <script>
+      new Tablesort(document.getElementById('taskTable'));
+    </script>
     <!-- Import Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
@@ -44,8 +75,8 @@
             <center>
               <span class="text-muted text-center">
                 <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
-                <a href="mailto:cncappel@iu.edu | ">aatalib@iu.edu</a>
-                <a href="mailto:cncappel@iu.edu | ">(insert email)</a>
+                <a href="mailto:aatalib@iu.edu | ">aatalib@iu.edu</a>
+                <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
                 <br>
                 <button id="loginButton"><a class="repoStyleButton"href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
                 <br>
