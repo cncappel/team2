@@ -29,13 +29,13 @@
   <h6 class="navbarCompany">Indiana Soccer Referee Association</h6>
 
   <body>
-    <div id="aboutUs" class="container-md">
-        <h1><u>Ref details list (Here)</u></h1>
+    <div id="refDataHeader" class="container-md">
+        <h1>Master Referee List:</h1>
     </div>
-  <center>
+    <div id="refData" class="container-md">
     <div id="refereesApp">
-      <div id="booksTable">
-        <table id="bookTableSorted" class="sortable-theme-dark">
+      <div id="refTable">
+        <table id="refTableSorted" class="sortable-theme-dark">
           <thead>
             <tr>
               <th scope="col" id="largeTable">Name</th>
@@ -55,16 +55,13 @@
         </table>
       </div>
     </div>  
-  </center>
-
-  </body>
+  </div> 
   <script src="js/referees.js"></script>
   <script src="js/tablesort.min.js"></script>
-  <script> new Tablesort(document.getElementById('bookTableSorted'));</script>
+  <script> new Tablesort(document.getElementById('refTableSorted'));</script>
     <!-- Import Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </body> 
     <footer id="footerColor" class="footer mt-auto py-3 bg-light">
       <div class="container">
