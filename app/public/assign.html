@@ -87,14 +87,29 @@
         <div class="col col-4">
           <h3>{{ selectedAssign === null ? "Add " : "Edit " }} Assignment</h3>
           <form v-on:submit.prevent="postAssign">
-            <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
+            <!-- <div class="mb-3">
+              <label for="refStatus" class="form-label">Ref Status</label>
               <input type="text" v-model="assignForm.refStatus"class="form-control" id="refStatus">
+            </div> -->
+            <div class="mb-3">
+              <label for="refStatus" class="form-label">Ref Status</label>
+              <select v-model="assignForm.refStatus" class="form-select" id="refStaus"  required="required">
+                <option value="Accepted">Accepted</option>
+                <option value="Declined">Declined</option>
+                <option value="Tentative">Tentative</option>
+
+                <!-- <option value="Accepted">Accepted</option> -->
+              </select>
             </div>
             <div class="mb-3">
-              <label for="author" class="form-label">Author</label>
-              <input type="text" v-model="assignForm.accepted" class="form-control" id="accepted">
+              <label for="accepted" class="form-label">Accepted</label>
+              <select v-model="assignForm.accepted" class="form-select" id="accepted"  required="required">
+                <option value="Accepted">Accepted</option>
+                <option value="Declined">Declined</option>
+                <!-- <option value="Accepted">Accepted</option> -->
+              </select>
             </div>
+
             <button type="submit" class="btn btn-primary">{{ selectedAssign === null ? "Submit" : "Edit " }} Assignment</button>
             <button type="button" class="btn btn-outline-secondary button-space" 
                  v-if="selectedAssign"
@@ -104,21 +119,23 @@
       </div>
     </div>
 
-    <!-- Footer START-->
-    <footer id="footer" class="footer mt-auto py-3 bg-light">
-      <center>
-        <span class="text-muted text-center">
-          <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
-          <a href="mailto:aatalib@iu.edu | ">aatalib@iu.edu</a>
-          <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
-          <br>
-          <button id="loginButton"><a class="repoStyleButton"href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
-          <br>
-          <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span>
-        </span>
-      </center>
-    </footer>
-    <!-- Footer END-->
+      <!-- Footer START-->
+      <footer class="footer mt-auto py-3 bg-light">
+        <center>
+          <span class="text-muted text-center">
+            <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
+            <a href="mailto:aatalib@iu.edu | ">aatalib@iu.edu</a>
+            <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
+            <br>
+            <button id="loginButton"><a class="repoStyleButton"href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
+            <br>
+            <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span>
+          </span>
+        </center>
+      </footer>
+      <!-- Footer END-->
+
+
 
     <!-- Script Table-->
     <script src="js/referees.js"></script>

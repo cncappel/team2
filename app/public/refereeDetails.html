@@ -56,6 +56,15 @@
           <!-- Table END-->
         </div>
       </div>
+      <div class="row align-items-start">
+        <div class="col col-4">
+          <!-- <p>Profile information for {{ person.name.first }}</p> -->
+          <div v-for="r in referees" v-on:click="selectStudent(r)"
+           :class="['Referees', {selected: selectedRef && r.id == selectedRef.refID}]">
+            <span class="refName">{{ r.name }}</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Script Table-->
