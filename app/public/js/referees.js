@@ -4,7 +4,8 @@ const refereesApp = {
         referees: [],
         assign: [],
         assignForm: {},
-        selectedAssign: null
+        selectedAssign: null,
+        selectedRef: null
       }
     },
     computed: {
@@ -26,8 +27,17 @@ const refereesApp = {
                 console.log('users data not pulling');
             })
         },
-        fetchAssignData() {
-            fetch('/api/assignments/')
+        selectRef(r) {
+          if (r == this.selectedRef) {
+            return;
+          }
+          this.selectedRef = r;
+          this.assign = [];
+          this.fetchAssignData(this.selectedRef);
+        },
+        fetchAssignData(r) {
+            console.log("Fetching data for ", r);
+            fetch('/api/assignments/?referee=' + r.refID)
             .then( response => response.json() )
             .then( (responseJson) => {
                 console.log(responseJson);
@@ -125,7 +135,6 @@ const refereesApp = {
     },
     created() {
         this.fetchRefereeData();
-        this.fetchAssignData();
     }
   }
   
