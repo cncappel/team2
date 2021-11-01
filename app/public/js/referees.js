@@ -10,7 +10,7 @@ const refereesApp = {
     },
     computed: {
         prettyBirthday() {
-            return dayjs(this.person.dob.date).format('DD MMM YYYY')
+          return dayjs(this.person.dob.date).format('DD MMM YYYY')
         }
     },
     methods: {
@@ -103,7 +103,6 @@ const refereesApp = {
         if ( !confirm("Are you sure you want to delete the book from " + o.companyName + "?") ) {
             return;
         }  
-            
             console.log("Delete!", o);
       
             fetch('api/assignments/delete.php', {
