@@ -20,11 +20,10 @@ const refereesApp = {
         }
         this.selectedRef = r;
         this.referees = [];
-        this.fetchRefereeData(this.selectedRef);
+        this.fetchAssignData(this.selectedRef);
       },
-      fetchRefereeData(r) {
-        console.log("Fetching refree data for ", r);
-          fetch('/api/referees/?Referees=' + r)
+      fetchRefereeData() {
+          fetch('/api/assignments/?')
           .then( response => response.json() )
           .then( (responseJson) => {
             console.log(responseJson);
@@ -36,8 +35,9 @@ const refereesApp = {
             console.log('users data not pulling');
           })
       },
-      fetchAssignData() {
-        fetch('/api/assignments/')
+      fetchAssignData(r) {
+        console.log("Fetching refree data for ", r);
+        fetch('/api/assignments/?referee=', r)
         .then( response => response.json() )
         .then( (responseJson) => {
           console.log(responseJson);

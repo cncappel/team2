@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS books;
 CREATE TABLE books (
 bookID int PRIMARY KEY AUTO_INCREMENT ,
     title varchar(55) UNIQUE NOT NULL,
-author varchar(48),
+    author varchar(48),
     yearPublished int,
     publisher varchar(55),
     pageCount int,
