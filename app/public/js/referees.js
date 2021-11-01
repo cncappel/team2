@@ -24,7 +24,7 @@ const refereesApp = {
       },
       fetchRefereeData(r) {
         console.log("Fetching refree data for ", r);
-          fetch('/api/referees/?Referees=' + r.id)
+          fetch('/api/referees/?Referees=' + r)
           .then( response => response.json() )
           .then( (responseJson) => {
             console.log(responseJson);
