@@ -33,8 +33,7 @@
     <div class="container" id="refereesApp">
       <div class="row align-items-start">
         <div class="col col-4">
-          <div v-for="r in referees" v-on:click="selectRef(r)"
-           :class="['Referees', {selected: selectRef && r.refID == selectRef.refID}]">
+          <div v-for="r in referees" v-on:click="selectRef(r)">
             <span class="refName">{{ r.name }}</span>
           </div>
         </div>

@@ -37,7 +37,7 @@ const refereesApp = {
       },
       fetchAssignData(r) {
         console.log("Fetching refree data for ", r);
-        fetch('/api/assignments/?referee=', r)
+        fetch('/api/assignments/?referee=', r.refId)
         .then( response => response.json() )
         .then( (responseJson) => {
           console.log(responseJson);
