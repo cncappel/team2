@@ -181,6 +181,10 @@ h5.card-header {
    background-color: #E9EAF5 !important;
 }
 
+.button-space {
+    margin-left: 5px;
+}
+
 #prettyProfileName{
     margin-top: 20px;
 }
@@ -192,3 +196,4 @@ h5.card-header {
 h1#welcomeProfile{
     padding-bottom: 20px;
 }
+
