@@ -67,7 +67,6 @@ div#navbarNavAltMarkup {
 
 #loginButton{
     border-radius: 20px;
-    padding: 5px 20px 5px 20px;
     background-color: #B6CAFB;
     margin-left: 5px;
     margin-right: 10px;
@@ -81,7 +80,7 @@ div#navbarNavAltMarkup {
 }
 
 #navLinks{
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 #submitLogin{
@@ -102,6 +101,10 @@ div#navbarNavAltMarkup {
 
 #footerColor{
     background-color: #E9EAF5 !important;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
 }
 
 img.d-block.w-100 {
@@ -197,3 +200,16 @@ h1#welcomeProfile{
     padding-bottom: 20px;
 }
 
+.referee {
+    margin: 10px 2px;
+    padding: 4px;
+    border: 1px solid lightgray;
+    background-color: #0B6EFD;
+    color: white;
+    font-size: 30px;
+}
+
+.selected {
+    background-color: #E9EAF5;
+    color: black;
+}
