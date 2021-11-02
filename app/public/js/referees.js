@@ -10,7 +10,7 @@ const refereesApp = {
     },
     computed: {
         prettyBirthday() {
-            return dayjs(this.person.dob.date).format('DD MMM YYYY')
+          return dayjs(this.person.dob.date).format('DD MMM YYYY')
         }
     },
     methods: {
