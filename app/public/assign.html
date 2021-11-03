@@ -64,7 +64,7 @@
                 <tr v-for="a in assign">
                   <td>{{ a.statusID }}</td>
                   <td>{{ a.refStatus }}</td>
-                  <td>{{a.field}}</td>
+                  <td>{{ a.field }}</td>
                   <td>
                     <!-- Edit Icon Button-->
                     <button type="button" v-on:click="handleEditAssign(a)" class="btn btn-outline-secondary btn-sm">
@@ -96,11 +96,9 @@
             <div class="mb-3">
               <label for="refStatus" class="form-label">Ref Status</label>
               <select v-model="assignForm.refStatus" class="form-select" id="refStaus"  required="required">
-                <option value="Accepted">Accepted</option>
+                <option value="accepted">Accepted</option>
                 <option value="Declined">Declined</option>
                 <option value="Tentative">Tentative</option>
-
-                <!-- <option value="Accepted">Accepted</option> -->
               </select>
             </div>
             <div class="mb-3">
