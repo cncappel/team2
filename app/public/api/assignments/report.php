@@ -6,15 +6,14 @@ $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
 $sql = 'SELECT 
-	name,
-  age, 
-  refGrade,
-  refRating,
-  refStatus,
-  position
-FROM Referees 
-  LEFT OUTER JOIN AssignmentStatus ON referee.refID = AssignmentStatus.id
-  GROUP BY name';
+name, 
+age, 
+refGrade, 
+refRating, 
+refStatus, 
+accepted, 
+position
+FROM Referees LEFT OUTER JOIN AssignmentStatus on Referees.refID = AssignmentStatus.id;';
 $vars = [];
 
 $stmt = $db->prepare($sql);

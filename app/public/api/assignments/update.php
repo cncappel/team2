@@ -33,14 +33,16 @@ $db = DbConnection::getConnection();
 $stmt = $db->prepare(
   'UPDATE AssignmentStatus SET
     refStatus = ?,
-    accepted = ?
-  WHERE statusID = ?'
+    accepted = ?,
+    position = ?
+  WHERE id = ?'
 );
 
 $stmt->execute([
     $_POST['refStatus'],
     $_POST['accepted'],
-    $_POST['statusID']
+    $_POST['position'],
+    $_POST['id']
   ]);
 
 // Get auto-generated PK from DB
