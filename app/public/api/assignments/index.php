@@ -11,7 +11,16 @@ $vars = [];
 
 if (isset($_GET['referee'])) {
   // This is an example of a parameterized query
-  $sql = 'SELECT * FROM AssignmentStatus WHERE id = ?';
+  $sql = 'SELECT 
+  name, 
+  age, 
+  refGrade, 
+  refRating, 
+  refStatus, 
+  accepted, 
+  position
+  FROM Referees LEFT OUTER JOIN AssignmentStatus on Referees.refID = AssignmentStatus.refID 
+  WHERE AssignmentStatus.gameID = ?';
   $vars = [ $_GET['referee'] ];
 }
 
