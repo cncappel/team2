@@ -43,28 +43,37 @@
       <h1 id="pageHeaders">Dynamic assignments table here</h1>
 
       <div class="row align-items-start">
-        <div class="col col-lg-4">
-          <div v-for="r in referees" v-on:click="selectRef(r)" :class="['referee', {selected: selectedRef && r.refID == selectedRef.refID}]">
-            <span>{{ r.name }}</span>
+        <div class="col col-lg-3">
+          <div v-for="g in games" v-on:click="selectGame(g)" :class="['referee', {selected: selectedRef && g.gameID == selectedRef.gameID}]">
+            <span>{{ g.field }}</span><br/>
+            <span>{{ g.date }} | {{ g.time }}</span>
           </div>
         </div>
-        <div class="col col-lg-8" v-if="selectedRef">
+        <div class="col col-lg-9" v-if="selectedRef">
 
           <!-- Table Start-->
           <table class="table" id="taskTable">
             <thead>
               <tr>
-                <th>Status ID </th>
-                <th>Ref Status </th>
-                <th>Game Field</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Ref Grade</th>
+                <th>Ref Rating</th>
+                <th>Ref Status</th>
+                <th>Accepted</th>
+                <th>Position</th>
                 <th>Edit/Delete </th>
               </tr>
             </thead>
             <tbody>
                 <tr v-for="a in assign">
-                  <td>{{ a.statusID }}</td>
-                  <td>{{ a.refStatus }}</td>
-                  <td>{{a.field}}</td>
+                  <td>{{a.name}}</td>
+                  <td>{{a.age}}</td>
+                  <td>{{a.refGrade}}</td>
+                  <td>{{a.refRating}}</td>
+                  <td>{{a.refStatus}}</td>
+                  <td>{{a.accepted}}</td>
+                  <td>{{a.position}}</td>
                   <td>
                     <!-- Edit Icon Button-->
                     <button type="button" v-on:click="handleEditAssign(a)" class="btn btn-outline-secondary btn-sm">
@@ -134,7 +143,7 @@
     </script>
 
   </body>
-  <footer id="footerColor" class="footer mt-auto py-3 bg-light">
+  <!-- <footer id="footerColor" class="footer mt-auto py-3 bg-light">
     <div class="container">
       <div class='row'>
         <div class="col-12">
@@ -152,5 +161,5 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </html>

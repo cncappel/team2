@@ -2,6 +2,7 @@ const refereesApp = {
     data() {
       return {
         referees: [],
+        games: [],
         assign: [],
         assignForm: {},
         selectedAssign: null,
@@ -27,17 +28,30 @@ const refereesApp = {
                 console.log('users data not pulling');
             })
         },
-        selectRef(r) {
-          if (r == this.selectedRef) {
+        fetchGameData() {
+          fetch('/api/games/')
+          .then( response => response.json() )
+          .then( (responseJson) => {
+              console.log(responseJson);
+              this.games = responseJson;
+              console.log('pulled users data');
+          })
+          .catch( (err) => {
+              console.error(err);
+              console.log('users data not pulling');
+          })
+      },
+        selectGame(g) {
+          if (g == this.selectedRef) {
             return;
           }
-          this.selectedRef = r;
+          this.selectedRef = g;
           this.assign = [];
           this.fetchAssignData(this.selectedRef);
         },
-        fetchAssignData(r) {
-            console.log("Fetching data for ", r);
-            fetch('/api/assignments/?referee=' + r.refID)
+        fetchAssignData(g) {
+            console.log("Fetching data for ", g);
+            fetch('/api/assignments/?referee=' + g.gameID)
             .then( response => response.json() )
             .then( (responseJson) => {
                 console.log(responseJson);
@@ -134,6 +148,7 @@ const refereesApp = {
     },
     created() {
         this.fetchRefereeData();
+        this.fetchGameData();
     }
   }
   
