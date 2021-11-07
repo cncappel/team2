@@ -92,9 +92,11 @@ const refereesApp = {
               this.assignForm = {};
             });
         },
-        postEditAssign(evt) {      
+        postEditAssign(evt) {     
             console.log("Posting:", this.assignForm);
-            // alert("Posting!");
+            // alert("Posting!"); 
+
+
       
             fetch('api/assignments/update.php', {
               method:'POST',
@@ -114,7 +116,7 @@ const refereesApp = {
             });
         },
         postDeleteAssign(o) {  
-        if ( !confirm("Are you sure you want to delete the book from " + o.companyName + "?") ) {
+        if ( !confirm("Are you sure you want to delete the book from " + o.field + "?") ) {
             return;
         }  
             console.log("Delete!", o);

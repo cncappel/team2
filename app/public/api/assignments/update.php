@@ -32,6 +32,8 @@ $db = DbConnection::getConnection();
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
   'UPDATE AssignmentStatus SET
+    refID = ?,
+    gameID = ?,
     refStatus = ?,
     accepted = ?,
     position = ?
@@ -39,6 +41,8 @@ $stmt = $db->prepare(
 );
 
 $stmt->execute([
+    $_POST['refID'],
+    $_POST['gameID'],
     $_POST['refStatus'],
     $_POST['accepted'],
     $_POST['position'],

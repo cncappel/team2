@@ -16,25 +16,27 @@
  
   </head>
 
-  <nav id="navbarColor" class="navbar navbar-expand-lg navbar-light bg-dark">
-    <a id="formattedISRA" class="navbar-brand" href="#">ISRA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" href="index.html">Home<span class="sr-only"></span></a>
-        <a class="nav-link" href="about.html">About Us</a>
-        <a class="nav-link" href="gameAssignments.html">Game Assignments</a>
-        <a class="nav-link" href="refereeProfile.html">Profile</a>
-        <a class="nav-link" href="assign.html">Assign</a>
-        <a class="nav-link" href="refereeDetails.html">Ref Details</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="formattedISRA" href="#">ISRA <span id='sm-nav-font'>Indiana Soccer Referee Association</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+      <div class="collapse d-flex" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="index.html">Home<span class="sr-only"></span></a>
+          <a class="nav-link" href="about.html">About Us</a>
+          <a class="nav-link" href="gameAssignments.html">Game Assignments</a>
+          <a class="nav-link" href="refereeProfile.html">Profile</a>
+          <a class="nav-link" href="assign.html">Assign</a>
+          <a class="nav-link" href="refereeDetails.html">Ref Details</a>
+        </div>
       </div>
     </div>
-    <br>
   </nav>
 
-  <h6 class="navbarCompany">Indiana Soccer Referee Association</h6>
+  
 
 
   <body>
@@ -65,54 +67,53 @@
               </tr>
             </thead>
             <tbody>
-                <tr v-for="a in assign">
-                  <td>{{a.name}}</td>
-                  <td>{{a.age}}</td>
-                  <td>{{a.refGrade}}</td>
-                  <td>{{a.refStatus}}</td>
-                  <td>{{a.accepted}}</td>
-                  <td>{{a.position}}</td>
-                  <td>
-                    <!-- Edit Icon Button-->
-                    <button type="button" v-on:click="handleEditAssign(a)" class="btn btn-outline-secondary btn-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                      </svg>
-                      Edit
-                    </button>
-                    <!-- Delete Icon Button-->
-                    <button type="button" v-on:click="postDeleteAssign(a)" class="btn btn-outline-secondary btn-sm btn-outline-danger button-space">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
+              <tr v-for="a in assign">
+                <td>{{a.name}}</td>
+                <td>{{a.age}}</td>
+                <td>{{a.refGrade}}</td>
+                <td>{{a.refStatus}}</td>
+                <td>{{a.accepted}}</td>
+                <td>{{a.position}}</td>
+                <td>
+                  <!-- Edit Icon Button-->
+                  <button type="button" v-on:click="handleEditAssign(a)" class="btn btn-outline-secondary btn-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg>
+                    Edit
+                  </button>
+                  <!-- Delete Icon Button-->
+                  <button type="button" v-on:click="postDeleteAssign(a)" class="btn btn-outline-secondary btn-sm btn-outline-danger button-space">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
             </tbody>
           </table>
+
+          <div v-if="! assign.length">
+            <h3>No Ref Assigned. 😥</h3>
+          </div>
 
           <!-- Table END-->
           <h3>{{ selectedAssign === null ? "Add " : "Edit " }} Assignment</h3>
           <form v-on:submit.prevent="postAssign">
-            <!-- <div class="mb-3">
-              <label for="refID" class="form-label">Ref ID</label>
-              <input type="text" v-model="assignForm.refID"class="form-control" id="refID">
-            </div> -->
-
 
             <div class="mb-3">
-              <label for="refID" class="form-label">Name</label>
+              <label for="refID" class="form-label">Ref Name</label>
               <select v-model="assignForm.refID" class="form-select" id="refID"  required="required">
-                <option value="refID" v-for="r in referees">{{ r.name }}</option>
+                <option :value="r.refID" v-for="r in referees">{{ r.name }}</option>
               </select>
             </div>
 
             <div class="mb-3">
               <label for="gameID" class="form-label">Game Field</label>
               <select v-model="assignForm.gameID" class="form-select" id="gameID"  required="required">
-                <option value="gameID" v-for="g in games">{{ g.field }}</option>
+                <option :value="g.gameID" v-for="g in games">{{ g.field }}</option>
               </select>
             </div>
 
@@ -140,20 +141,13 @@
                 <option value="Lower-field">Lower Field</option>
               </select>
             </div>
-            
+
             <button type="submit" class="btn btn-primary">{{ selectedAssign === null ? "Submit" : "Edit " }} Assignment</button>
-            <button type="button" class="btn btn-outline-secondary button-space" 
-              v-if="selectedAssign"
-              v-on:click="handleResetEdit">Cancel Edit</button>
+            <button type="button" class="btn btn-outline-secondary button-space" v-if="selectedAssign" v-on:click="handleResetEdit">Cancel Edit</button>
           </form>
 
-
         </div>
 
-        <!-- Forms Section -->
-        <div class="col col-4">
-
-        </div>
       </div>
     </div>
     
@@ -164,24 +158,18 @@
       new Tablesort(document.getElementById('taskTable'));
     </script>
 
+    <footer>
+      <center>
+        <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span><br>
+        <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
+        <a href="aatalib@iu.edu | ">aatalib@iu.edu</a>
+        <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
+        <br><br>
+        <button type="button" class="btn btn-light"><a class="repoStyleButton" href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
+        <br>
+      </center>
+    </footer>
+
   </body>
-  <!-- <footer id="footerColor" class="footer mt-auto py-3 bg-light">
-    <div class="container">
-      <div class='row'>
-        <div class="col-12">
-          <center>
-            <span class="text-muted text-center">
-              <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
-              <a href="aatalib@iu.edu | ">aatalib@iu.edu</a>
-              <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
-              <br>
-              <button id="loginButton"><a class="repoStyleButton"href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
-              <br>
-              <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span>
-            </span>
-          </center>
-        </div>
-      </div>
-    </div>
-  </footer> -->
+
 </html>
