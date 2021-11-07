@@ -5,14 +5,9 @@ require 'class/DbConnection.php';
 // Step 1: Get a datase connection from our helper class
 $db = DbConnection::getConnection();
 
-
-if (isset($_GET['referee'])) {
-  // This is an example of a parameterized query
-  $sql = 'SELECT *
-  FROM Referees LEFT OUTER JOIN AssignmentStatus on Referees.refID = AssignmentStatus.refID 
-  WHERE AssignmentStatus.gameID = ?';
-  $vars = [ $_GET['referee'] ];
-}
+// Step 2: Create & run the query
+$sql = 'SELECT * FROM SoccerGame';
+$vars = [];
 
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
