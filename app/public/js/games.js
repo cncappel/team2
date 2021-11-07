@@ -39,6 +39,14 @@ const gameApp = {
               this.resetGameForm();
             });
         },
+        postGame(evt) {
+          console.log ("Test:", this.selectedGame);
+        if (this.selectedGame) {
+            this.postEditGame(evt);
+        } else {
+            this.postNewGame(evt);
+        }
+      },
         postDeleteGame(o) {
           if (!confirm("Are you sure you want to delete the offer from "+o.field+"?")) {
               return;
