@@ -98,25 +98,44 @@
           <!-- Table END-->
           <h3>{{ selectedAssign === null ? "Add " : "Edit " }} Assignment</h3>
           <form v-on:submit.prevent="postAssign">
-            <!-- <div class="mb-3">
+            <div class="mb-3">
               <label for="refID" class="form-label">Ref ID</label>
-              <input type="text" v-model="assignForm.refID"class="form-control" id="refID">
-            </div> -->
-
+              <input type="number" v-model="assignForm.refID"class="form-control" id="refID">
+            </div>
 
             <div class="mb-3">
+              <label for="gameID" class="form-label">Game ID</label>
+              <input type="number" v-model="assignForm.gameID"class="form-control" id="gameID">
+            </div>
+
+
+            <!-- <div class="mb-3">
+              <label for="refID" class="form-label">Ref ID</label>
+              <select v-model="assignForm.refID" class="form-select" id="refID"  required="required">
+                <option value="refID" v-for="r in referees">{{ r.refID }}</option>
+              </select>
+            </div> -->
+
+            <!-- <div class="mb-3">
+              <label for="gameID" class="form-label">Game ID</label>
+              <select v-model="assignForm.gameID" class="form-select" id="gameID"  required="required">
+                <option value="gameID" v-for="g in games">{{ g.gameID }}</option>
+              </select>
+            </div> -->
+
+            <!-- <div class="mb-3">
               <label for="refID" class="form-label">Name</label>
               <select v-model="assignForm.refID" class="form-select" id="refID"  required="required">
                 <option value="refID" v-for="r in referees">{{ r.name }}</option>
               </select>
-            </div>
+            </div> -->
 
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label for="gameID" class="form-label">Game Field</label>
               <select v-model="assignForm.gameID" class="form-select" id="gameID"  required="required">
                 <option value="gameID" v-for="g in games">{{ g.field }}</option>
               </select>
-            </div>
+            </div> -->
 
             <div class="mb-3">
               <label for="refStatus" class="form-label">Ref Status</label>
@@ -152,10 +171,6 @@
 
         </div>
 
-        <!-- Forms Section -->
-        <div class="col col-4">
-
-        </div>
       </div>
     </div>
     
