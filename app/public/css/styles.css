@@ -5,6 +5,10 @@ h1#pageHeaders {
     color: lightslategray;
 }
 
+.container {
+    margin-bottom: 5%;
+}
+
 h1#aboutHeader{
     color: lightslategray;
     text-align: center;

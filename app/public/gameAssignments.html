@@ -51,15 +51,16 @@
                 <th>Date</th>
                 <th>Time</th>
                 <th>Game Level</th>
+                <th>Edit/Delete</th>
               </tr>
             </thead>
             <tbody>
                 <tr v-for="game in games">
                   <td>{{ game.gameID }}</td>
-                  <td>{{ game.field }}</td>
+                  <td>{{ game.field}}</td>
                   <td>{{ game.date }}</td>
                   <td>{{ game.time }}</td>
-                  <td>{{game.gameLevel}}</td>
+                  <td>{{ game.gameLevel }}</td>
                   <td>
                     <button type="button" v-on:click="selectGame(game)" class="btn btn-outline-secondary btn-sm">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -68,7 +69,7 @@
                       </svg>
                       Edit
                     </button>
-                    <button type="button" v-on:click="postDeleteGame(game)" lass="btn btn-outline-secondary btn-sm btn-outline-danger button-space">
+                    <button type="button" v-on:click="postDeleteGame(game)" class="btn btn-outline-secondary btn-sm btn-outline-danger button-space">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                         <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
@@ -82,14 +83,14 @@
         </div>
           <!-- Form -->
           <div class="col col-lg-4">
-            <form v-on:submit.prevent="postNewGame" class="masterGameForm">
+            <form v-on:submit.prevent="postGame" class="masterGameForm">
               <div class="mb-3">
                 <label for="field" class="form-label">Field Title</label>
                 <input type="text" v-model="gameForm.field" class="form-control" id="field" required="required">
               </div>
               <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
-                <input type="text" v-model="gameForm.date" class="form-control" id="date" required="required">
+                <input type="date" v-model="gameForm.date" class="form-control" id="date" required="required">
               </div>
               <div class="mb-3">
                 <label for="time" class="form-label">Time</label>
@@ -119,7 +120,7 @@
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   
     <!-- Footer START-->
-    <footer id="footer" class="footer mt-auto py-3 bg-light">
+    <!-- <footer id="footer" class="footer mt-auto py-3 bg-light">
       <center>
         <span class="text-muted text-center">
           <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
@@ -131,7 +132,7 @@
           <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span>
         </span>
       </center>
-    </footer>
+    </footer> -->
     <!-- Footer END-->
   </body>
 </html>
