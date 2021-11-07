@@ -9,17 +9,17 @@ const masterApp = {
     computed: {},
     methods: {
         fetchRefereeData() {
-            fetch('/api/referees/')
-            .then( response => response.json() )
-            .then( (responseJson) => {
-                console.log(responseJson);
-                this.referees = responseJson;
-                console.log('pulled users data');
-            })
-            .catch( (err) => {
-                console.error(err);
-                console.log('users data not pulling');
-            })
+          fetch('/api/referees/')
+          .then( response => response.json() )
+          .then( (responseJson) => {
+              console.log(responseJson);
+              this.referees = responseJson;
+              console.log('pulled users data');
+          })
+          .catch( (err) => {
+              console.error(err);
+              console.log('users data not pulling');
+          })
         },
         postNewRef(evt) {
             fetch('api/referees/create.php', {
@@ -39,6 +39,14 @@ const masterApp = {
                 this.resetRefForm();
               });
           },
+          postRef(evt) {
+            console.log ("Test:", this.selectedRef);
+          if (this.selectedRef) {
+              this.postEditReferee(evt);
+          } else {
+              this.postNewRef(evt);
+          }
+        },
           postDeleteReferee(o) {
             if (!confirm("Are you sure you want to delete the offer from "+o.name+"?")) {
                 return;
