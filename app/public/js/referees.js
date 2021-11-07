@@ -92,9 +92,11 @@ const refereesApp = {
               this.assignForm = {};
             });
         },
-        postEditAssign(evt) {      
+        postEditAssign(evt) {     
             console.log("Posting:", this.assignForm);
-            // alert("Posting!");
+            // alert("Posting!"); 
+
+
       
             fetch('api/assignments/update.php', {
               method:'POST',
