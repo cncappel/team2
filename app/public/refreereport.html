@@ -54,53 +54,41 @@
     </div>
   </nav>
 
-
   <body>
-    <div id="aboutUs" class="container">
-      <center>
-        <div id="userApp" class="userProfile">
-        <h1 id="welcomeProfile">Welcome {{ person.name.first }} {{ person.name.last }}</h1>
-        <div class="card" style="width: 50rem;">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a :href="person.picture.large"><img :src="person.picture.large" id="profileImage"></a>
-              <p id="prettyProfileName">{{ person.name.first }} {{ person.name.last }}</p>
-            </h5>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              {{person.location.state}}, {{person.location.country}}
-            </li>
-            <li class="list-group-item">
-              {{ prettyBirthday }}
-          </li>
-          <li class="list-group-item">
-            {{person.dob.age}}
-          </li>
-          <li class="list-group-item">
-            <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a>
-          </li>
-          </ul>
-        </div>
-      </div>
-      </center>
+   
+  
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col col-lg-12"  id="masterApp">
+        <h1 id="pageHeaders">Unassigned refree report</h1>
+        <!-- Table START-->
+        <table class="table" id="unassignTable">
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Field</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr v-for="unassign in report">
+                <td>{{ unassign.refStatus }}</td>
+                <td>{{ unassign.field}}</td>
+                <td>{{ unassign.date }}</td>
+                <td>
+                
+                  
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      <!-- Table END-->
     </div>
+  </div>
+</div>
 
-
-    <footer>
-      <center>
-        <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span><br>
-        <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
-        <a href="aatalib@iu.edu | ">aatalib@iu.edu</a>
-        <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
-        <br><br>
-        <button type="button" class="btn btn-light"><a class="repoStyleButton" href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
-        <br>
-      </center>
-    </footer>
-
-    <script src="js/users.js"></script>
-
+   <script src="js/masterReferee.js"></script>
+  
 
   </body>
 </html>
