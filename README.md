@@ -5,6 +5,9 @@ aatalib
 cncappel
 masaxena
 
+# Link
+http://ec2-18-218-189-18.us-east-2.compute.amazonaws.com/gameAssignments.html
+
 # Home Page
 Instructions: View the home page. Use the top navigation bar to login and view the information.
 
