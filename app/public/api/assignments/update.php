@@ -35,7 +35,6 @@ $stmt = $db->prepare(
     refID = ?,
     gameID = ?,
     refStatus = ?,
-    accepted = ?,
     position = ?
   WHERE id = ?'
 );
@@ -44,7 +43,6 @@ $stmt->execute([
     $_POST['refID'],
     $_POST['gameID'],
     $_POST['refStatus'],
-    $_POST['accepted'],
     $_POST['position'],
     $_POST['id']
   ]);

@@ -54,14 +54,13 @@
         <div class="col col-lg-9" v-if="selectedRef">
 
           <!-- Table Start-->
-          <table class="table" id="taskTable">
+          <table class="table">
             <thead>
               <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Ref Grade</th>
                 <th>Ref Status</th>
-                <th>Accepted</th>
                 <th>Position</th>
                 <th>Edit/Delete </th>
               </tr>
@@ -72,7 +71,6 @@
                 <td>{{a.age}}</td>
                 <td>{{a.refGrade}}</td>
                 <td>{{a.refStatus}}</td>
-                <td>{{a.accepted}}</td>
                 <td>{{a.position}}</td>
                 <td>
                   <!-- Edit Icon Button-->
@@ -121,25 +119,19 @@
             <div class="mb-3">
               <label for="refStatus" class="form-label">Ref Status</label>
               <select v-model="assignForm.refStatus" class="form-select" id="refStatus"  required="required">
-                <option value="Unassigned">Unassigned</option>
+                <option value="Unassigned" selected>Unassigned</option>
                 <option value="Assigned">Assigned</option>
                 <option value="Tentitive">Tentitive</option>
               </select>
             </div>
 
-            <div class="mb-3">
-              <label for="accepted" class="form-label">Accepted</label>
-              <select v-model="assignForm.accepted" class="form-select" id="accepted"  required="required">
-                <option value="Accepted">Accepted</option>
-                <option value="Declined">Declined</option>
-              </select>
-            </div>
 
             <div class="mb-3">
               <label for="position" class="form-label">Position</label>
               <select v-model="assignForm.position" class="form-select" id="position"  required="required">
                 <option value="Upper-field">Upper Field</option>
                 <option value="Lower-field">Lower Field</option>
+                <option value="Mid-field">Mid Field</option>
               </select>
             </div>
 
@@ -154,10 +146,6 @@
     
     <!-- Script Table-->
     <script src="js/referees.js"></script>
-    <script src="js/tablesort.js"></script>
-    <script>
-      new Tablesort(document.getElementById('taskTable'));
-    </script>
 
     <footer>
       <center>
