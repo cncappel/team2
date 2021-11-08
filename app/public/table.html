@@ -24,6 +24,7 @@
     <main>
       <h1 class="center"> Games Assignment Schedule</h1>
       <hr>
+      <div id="gamesApp">
       <table class="table table-success table-striped table-hover table-bordered">
         <thead>
           <tr>
@@ -59,7 +60,7 @@
         </tbody>
       </table>
       <h2>Submission Form</h2>
-      <form>
+      <form v-on:submit.prevent="postNewBook">
         <div class="mb-3">
           <label for="GID" class="form-label">Game ID</label>
           <input type="text" class="form-control" id="GID" aria-describedby="emailHelp">
@@ -87,6 +88,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+    </div>
     </main>
     <footer id="footerColor" class="footer mt-auto py-3 bg-light">
       <div class="container">
