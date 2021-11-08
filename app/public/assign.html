@@ -61,7 +61,7 @@
   <body>
 
     <div class="container" id="refereesApp">
-      <h1 id="pageHeaders">Dynamic assignments table here</h1>
+      <h1 id="pageHeadersReports">Dynamic assignments table here</h1>
 
       <div class="row align-items-start">
         <div class="col col-lg-3">
@@ -112,8 +112,9 @@
             </tbody>
           </table>
 
-          <p><a href="api/assignments/?format=csv" download> Download as CSV </a></p>
-
+          <button type="button" class="btn btn-primary"><a href="api/assignments/?format=csv" download id="downloadButton"> Download as CSV </a></button>
+          <br>
+          <br>
           <div v-if="! assign.length">
             <h3>No Ref Assigned.</h3>
           </div>

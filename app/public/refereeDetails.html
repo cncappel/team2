@@ -57,7 +57,7 @@
 
   <body>
     <div class="container" id="masterApp">
-      <h1 id="pageHeaders">Master Referee List</h1>
+      <h1 id="pageHeadersReports">Master Referee List</h1>
       <center class="titleCard">
         <div class="card">
           <h5 class="card-header">Notice*</h5>
@@ -107,7 +107,7 @@
             </tbody>
           </table>
           <!-- Table END-->
-          <p><a href="api/referees/?format=csv" download> Download as CSV </a></p>
+          <button type="button" class="btn btn-primary"><a href="api/referees/?format=csv" download id="downloadButton"> Download as CSV </a></button>
         </div>
           <!-- Form -->
           <div class="col col-lg-4">
