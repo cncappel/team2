@@ -20,9 +20,24 @@ $stmt->execute($vars);
 
 $books = $stmt->fetchAll();
 
-// Step 3: Convert to JSON
-$json = json_encode($books, JSON_PRETTY_PRINT);
 
-// Step 4: Output
-header('Content-Type: application/json');
-echo $json;
+if (isset($_GET['format']) && $_GET['format']=='csv') {
+    header('Content-Type: text/csv');
+    echo "RefID,Name,Age,RefGrade, RefRating\r\n";
+  
+    foreach($books as $o) {
+      echo $o['refID'] . ","
+          ."\"".$o['name'] . "\","
+          .$o['age'] . ","
+          .$o['refGrade'] . ","
+          .$o['refRating'] . "\r\n";
+    }
+  
+  } else {
+    // Step 3: Convert to JSON
+    $json = json_encode($books, JSON_PRETTY_PRINT);
+  
+    // Step 4: Output
+    header('Content-Type: application/json');
+    echo $json;
+  }

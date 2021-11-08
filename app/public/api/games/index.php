@@ -20,9 +20,23 @@ $stmt->execute($vars);
 
 $books = $stmt->fetchAll();
 
-// Step 3: Convert to JSON
-$json = json_encode($books, JSON_PRETTY_PRINT);
-
-// Step 4: Output
-header('Content-Type: application/json');
-echo $json;
+if (isset($_GET['format']) && $_GET['format']=='csv') {
+    header('Content-Type: text/csv');
+    echo "GameID,Field,Date,Time,GameLevel\r\n";
+  
+    foreach($books as $o) {
+      echo $o['gameID'] . ","
+          ."\"".$o['field'] . "\","
+          .$o['date'] . ","
+          .$o['time'] . ","
+          .$o['gameLevel'] . "\r\n";
+    }
+  
+  } else {
+    // Step 3: Convert to JSON
+    $json = json_encode($books, JSON_PRETTY_PRINT);
+  
+    // Step 4: Output
+    header('Content-Type: application/json');
+    echo $json;
+  }

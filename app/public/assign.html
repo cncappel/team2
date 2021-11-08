@@ -95,8 +95,10 @@
             </tbody>
           </table>
 
+          <p><a href="api/assignments/?format=csv" download> Download as CSV </a></p>
+
           <div v-if="! assign.length">
-            <h3>No Ref Assigned. 😥</h3>
+            <h3>No Ref Assigned.</h3>
           </div>
 
           <h3>{{ selectedAssign === null ? "Add " : "Edit " }} Assignment</h3>

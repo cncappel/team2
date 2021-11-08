@@ -4,7 +4,8 @@ require 'class/DbConnection.php';
 
 // Step 1: Get a datase connection from our helper class
 $db = DbConnection::getConnection();
-
+$sql = 'SELECT * FROM AssignmentStatus';
+$vars = [];
 
 if (isset($_GET['referee'])) {
   // This is an example of a parameterized query
