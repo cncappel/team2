@@ -226,3 +226,18 @@ h1#welcomeProfile{
     color: red;
 }
 
+h1#pageHeadersReports {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    color: lightslategray;
+}
+
+#downloadButton{
+    text-decoration: none;
+    color: white;
+}
+
+#dateDownload{
+    margin-left: 20px;
+}

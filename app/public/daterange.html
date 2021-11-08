@@ -1,3 +1,5 @@
+
+   
 <!doctype html>
 <html>
   <head>
@@ -57,8 +59,10 @@
   <body>
 
    <!-- Form -->
-   <div class="container">
-    <div class="col col-lg-4" id="masterApp">
+   <div class="container"> 
+    <h1 id="pageHeadersReports">Generate Reports For A Specific Range</h1> 
+    <div class="row align-items-start">
+    <div class="col col-lg-12" id="masterApp">
       <form v-on:submit.prevent="DateRangeRep" >
         <div class="mb-3">
           <label for="startdate" class="form-label">Select Start date</label>
@@ -74,15 +78,12 @@
               <option v-for="r in referees" :value= 'r.refID' >{{ r.name }}</option>
           </select>
         </div>
-      
-        <button type="submit">View reports</button>
+        <br>
+        <button type="submit" class="btn btn-primary">View reports</button>
+        <button type="button" class="btn btn-primary" id="dateDownload"><a href="api/assignments/?format=csv" download id="downloadButton">Download as CSV </a></button>
       </form>
-
-      <p><a href="api/assignments/?format=csv" download> Download as CSV </a></p>
-
       
         
-      <div class="col col-lg-8">
         <!-- Table START-->
         <table class="table" id="daterefTable">
           <thead>
@@ -105,11 +106,22 @@
           </tbody>
         </table>
       </div>
-      </div>
+    </div>
     </div>
     
     <!-- Script Table-->
     <script src="js/masterReferee.js"></script>
 
+    <footer>
+      <center>
+        <span>All work produced by Clara Cappel, Ali Talib, and Manvi Saxena</span><br>
+        <a href="mailto:cncappel@iu.edu | ">cncappel@iu.edu</a>
+        <a href="aatalib@iu.edu | ">aatalib@iu.edu</a>
+        <a href="mailto:masaxena@iu.edu | ">masaxena@iu.edu</a>
+        <br><br>
+        <button type="button" class="btn btn-light"><a class="repoStyleButton" href="https://github.com/cncappel/team2.git">GitHub Repo</a></button>
+        <br>
+      </center>
+    </footer>
   </body>
 </html>

@@ -6,19 +6,43 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </head>
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" id="formattedISRA" href="#">ISRA <span id='sm-nav-font'>Indiana Soccer Referee Association</span></a>
-      <div class="collapse d-flex" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" href="index.html">Home<span class="sr-only"></span></a>
-          <a class="nav-link" href="about.html">About Us</a>
-          <a class="nav-link" href="gameAssignments.html">Game Assignments</a>
-          <a class="nav-link" href="refereeProfile.html">Profile</a>
-          <a class="nav-link" href="assign.html">Assign</a>
-          <a class="nav-link" href="refereeDetails.html">Ref Details</a>
-        </div>
+      <a class="navbar-brand" id="formattedISRA" href="index.html">ISRA <span id='sm-nav-font'>Indiana Soccer Referee Association</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+      <div class="collapse d-flex" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gameAssignments.html">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="refereeProfile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="assign.html">Assign</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="refereeDetails.html">Ref Details</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Reports
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="refreereport.html">Ref Report</a></li>
+              <li><a class="dropdown-item" href="daterange.html">Game Report</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
